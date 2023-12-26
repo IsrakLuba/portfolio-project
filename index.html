@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1b1b1b;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin: 0 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #40c9a2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #40c9a2;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #ffffff;
+            padding: 80px 0;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Portfolio Section */
+/* Portfolio Section */
+.portfolio {
+    background-color: #1b1b1b;
+    padding: 80px 0;
+}
+
+.portfolio h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card {
+    border: none;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    background-color: #333;
+    color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance box shadow on hover */
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Add gradient overlay */
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.overlay-description {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.overlay-button {
+    background-color: #40c9a2;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.overlay-button:hover {
+    background-color: #338b7b;
+}
+        /* Contact Section */
+        .contact {
+            background-color: #40c9a2;
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">ISRAK JAHAN LUBA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>ISRAK JAHAN LUBA</h1>
+            <p>Web Developer | Designer </p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am currently a final year student of cse department of daffodil international university. I am very dedicated towards my work. I am more interested in working on the front end. Design fascinates me. So I started working with some web site design. And I hope to go far in fulfilling my dreams in the future.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2>Portfolio</h2>
+        <div class="card-deck">
+
+            <!-- Project 1 -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="image/to-do-list.png" class="card-img-top" alt="Project 1">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">To-Do-List</h5>
+                    <p class="card-text">In this project of to-do-list, the main work is to add tasks, edit, delete,
+                        mark task done, clear complete tasks and count the total number of tasks added etc.</p>
+                    <a href="to-do-list.html" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="image/medication.png" class="card-img-top" alt="Project 2">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Medication Management</h5>
+                    <p class="card-text">The main work of this project is to update and clear options of how much medicine has been consumed, 
+                        how much has been missed, and how much medicine is in total.</p>
+                    <a href="medication.html" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card ">
+                <div class="card-img-wrapper">
+                    <img src="image/health-dashboard.png" class="card-img-top" alt="Project 3">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Health Dashboard</h5>
+                    <p class="card-text">The main work of this project is vital sings, activity, medication tracking, nutrition analysis,
+                        their update information can be written, edited. Daily activities can be done in store.</p>
+                    <a href="health-dashboard.html" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="image/research-hub.png" class="card-img-top" alt="Project 4">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Research-Hub</h5>
+                    <p class="card-text">Here are some updated research papers on the disease. You can also read more papers.</p>
+                    <a href="research-hub.html" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <!-- Add more projects as needed -->
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: israkjahanluba@gmail.com</p>

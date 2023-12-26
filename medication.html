@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medication Management</title>
+  <style>
+    /* Styles for the medication management tool */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .medication-section {
+      margin-top: 20px;
+    }
+    .medication-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    .medication-field {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .medication-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .clear-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e57373;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 3px;
+    }
+    .medication-stats {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Medication Management</h1>
+    <form class="medication-section">
+      <label class="medication-label" for="medicationsTaken">Medications Taken:</label>
+      <input type="number" class="medication-field" id="medicationsTaken" placeholder="Enter medications taken">
+      
+      <label class="medication-label" for="medicationsMissed">Medications Missed:</label>
+      <input type="number" class="medication-field" id="medicationsMissed" placeholder="Enter medications missed">
+
+      <label class="medication-label" for="totalMedications">Total Medications:</label>
+      <input type="number" class="medication-field" id="totalMedications" placeholder="Enter total medications">
+      
+      <button class="medication-button" id="update-button">Update</button>
+      <button class="clear-button" id="clear-button">Clear</button>
+    </form>
+    <div class="medication-stats" id="medication-stats"></div>
+  </div>
+
+  <script>
+    const updateButton = document.getElementById('update-button');
+    const clearButton = document.getElementById('clear-button');
+    const medicationStats = document.getElementById('medication-stats');
+    const inputFields = document.querySelectorAll('.medication-field');
+
+    updateButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      clearButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        inputFields.forEach(field => field.value = '');
+        medicationStats.innerHTML = '';
+      });
+
+      const medicationsTaken = parseInt(document.getElementById('medicationsTaken').value) || 0;
+      const medicationsMissed = parseInt(document.getElementById('medicationsMissed').value) || 0;
+      const totalMedications = parseInt(document.getElementById('totalMedications').value) || 0;
+
+      const medicationsRemaining = totalMedications - (medicationsTaken + medicationsMissed);
+
+      const stats = `<p>Medications Taken: ${medicationsTaken}</p>
+                     <p>Medications Missed: ${medicationsMissed}</p>
+                     <p>Medications Remaining: ${medicationsRemaining}</p>`;
+
+      medicationStats.innerHTML = stats;
+    });
+  </script>
+</body>
+</html>

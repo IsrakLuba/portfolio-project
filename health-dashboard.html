@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Custom styles for the dashboard */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      background-image: url(images/dashboard.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    
+    .dashboard {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #a58d8d;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      
+    }
+    .dashboard-title {
+      font-size: 28px;
+      color: #c01515;
+      font-family: 'Times New Roman', Times, serif;
+     
+    }
+    
+    .data-card {
+      padding: 20px;
+      background-color: #d4e9d3;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .data-card-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #5c1910;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .data-card-content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .data-item {
+      flex: 1;
+      text-align: center;
+    }
+    .data-item-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+    .editable {
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  .editable:hover {
+    color: #0056b3;
+  }
+  .edit-button {
+    display: none;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .data-item:hover .edit-button {
+    display: inline-block;
+  }
+    .edit-input {
+      display: none;
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <div class="dashboard-title"> Dashboard</div>
+      
+    </div>
+    
+    <div class="data-card">
+      <div class="data-card-title">Vital Signs</div>
+      <div class="data-card-content">
+        <div class="data-item">
+          <div class="data-item-value">120</div>
+          <div>Heart Rate (bpm)</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+          
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">80</div>
+          <div>Blood Pressure (mmHg)</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">98.6</div>
+          <div>Body Temperature (°F)</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+      </div>
+    </div>
+    
+    <div class="data-card">
+      <div class="data-card-title">Activity</div>
+      <div class="data-card-content">
+        <div class="data-item">
+          <div class="data-item-value">8000</div>
+          <div>Steps</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">5</div>
+          <div>Miles Walked</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">300</div>
+          <div>Calories Burned</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+      </div>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">Medication Tracking</div>
+      <div class="data-card-content">
+        <div class="data-item">
+          <div class="data-item-value">2</div>
+          <div>Medications Taken</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">1</div>
+          <div>Medications Missed</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">3</div>
+          <div>Medications Remaining</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+      </div>
+    </div>
+
+    <div class="data-card">
+      <div class="data-card-title">Nutrition Analysis</div>
+      <div class="data-card-content">
+        <div class="data-item">
+          <div class="data-item-value">2000</div>
+          <div>Calories Consumed</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">50g</div>
+          <div>Protein Intake</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">30g</div>
+          <div>Fat Intake</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+        <div class="data-item">
+          <div class="data-item-value">300g</div>
+          <div>Carbohydrates Intake</div>
+          <button class="edit-button" onclick="toggleEdit(this)">Edit</button>
+          <input class="edit-input" type="number" value="120">
+        </div>
+      </div>
+    </div>
+    <!-- New section for displaying daily activities history -->
+    <!-- New section for displaying daily activities history -->
+<div class="data-card">
+  <div class="data-card-title">Daily Activities History</div>
+  <div class="data-card-content">
+    <!-- Form for adding new activity -->
+    <form id="addActivityForm">
+      <label for="activityDate">Date:</label>
+      <input type="date" id="activityDate" required>
+      <label for="activitySteps">Steps:</label>
+      <input type="number" id="activitySteps" required>
+      <label for="activityMiles">Miles Walked:</label>
+      <input type="number" id="activityMiles" required>
+      <label for="activityCalories">Calories Burned:</label>
+      <input type="number" id="activityCalories" required>
+      <button type="submit">Add Activity</button>
+    </form>
+    <!-- Table to display activity history -->
+    <table id="activityHistoryTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Steps</th>
+          <th>Miles Walked</th>
+          <th>Calories Burned</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+
+<!-- ... (your existing code) ... -->
+  </div>
+  
+  <script>
+    function toggleEdit(button) {
+    const dataItem = button.closest('.data-item');
+    const valueDisplay = dataItem.querySelector('.data-item-value');
+    const editInput = dataItem.querySelector('.edit-input');
+
+    if (valueDisplay.style.display !== 'none') {
+      valueDisplay.style.display = 'none';
+      editInput.style.display = 'inline-block';
+      editInput.value = valueDisplay.textContent;
+      button.textContent = 'Save';
+    } else {
+      valueDisplay.style.display = 'inline-block';
+      editInput.style.display = 'none';
+      valueDisplay.textContent = editInput.value;
+      button.textContent = 'Edit';
+    }
+  }
+// Function to populate activity history table
+const storedData = {
+    '2023-06-01': { steps: 8000, milesWalked: 5, caloriesBurned: 300 },
+    '2023-06-02': { steps: 9000, milesWalked: 6, caloriesBurned: 350 },
+    '2023-06-03': { steps: 7500, milesWalked: 4.5, caloriesBurned: 280 },
+    // ... more data
+  };
+
+  // Function to populate activity history table
+  const addActivityForm = document.getElementById('addActivityForm');
+  addActivityForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const activityDate = document.getElementById('activityDate').value;
+    const activitySteps = parseInt(document.getElementById('activitySteps').value);
+    const activityMiles = parseFloat(document.getElementById('activityMiles').value);
+    const activityCalories = parseInt(document.getElementById('activityCalories').value);
+
+    // Add the new activity to the storedData object
+    storedData[activityDate] = {
+      steps: activitySteps,
+      milesWalked: activityMiles,
+      caloriesBurned: activityCalories,
+    };
+
+    // Repopulate the activity history table
+    populateActivityHistoryTable();
+
+    // Reset form inputs
+    addActivityForm.reset();
+  });
+
+  // Initialize activity history table
+  populateActivityHistoryTable();
+
+  
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

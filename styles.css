@@ -1,0 +1,9 @@
+body {
+    padding-top: 56px; /* Adjust according to your navbar height */
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

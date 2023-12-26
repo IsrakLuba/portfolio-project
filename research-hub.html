@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Hub - Recommendations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/*  media query: */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+}
+    body {
+      background-color: #c2b4b6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 0;
+      border-bottom: 2px solid #4d4d4d;
+    } */
+
+    .navbar-brand {
+      color: #101110;
+      font-size: 28px;
+      font-weight: bold;
+      
+    }
+
+    .navbar-toggler {
+      border: 2px solid #c7afaf;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #070606;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .nav-link {
+      color: #ffffff;
+      font-size: 20px;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #678c92;
+    }
+
+    .container {
+      background-color: #395f52;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(116, 81, 81, 0.1);
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    .research-list {
+      margin-top: 30px;
+    }
+
+    .research-item {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #e6e6e6;
+      border-radius: 15px;
+      background-color: #f9f9f9;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .research-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .research-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+
+    .research-description {
+      font-size: 18px;
+      color: #555555;
+      margin-bottom: 20px;
+    }
+
+    .research-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .text-center{
+         color: #c0d4e9;
+    }
+    .mb-4{
+        color:#c0d4e9; 
+        font-size: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Research Hub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#liver-disease">Liver Disease</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cancer">Cancer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#heart">Heart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ovarian-cyst">Ovarian Cyst</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#diabetes">Diabetes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#infectious-disease">Infectious Disease</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="text-center mb-4">Recommended Research Papers</h2>
+  <p class="mb-4">I don't have real-time access to the internet to provide specific research paper links. However, I can guide you on how to find reputable research papers on these topics:</p>
+
+  
+  <!-- Liver Disease Research Item -->
+  <div id="liver-disease" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Liver Disease</h3>
+      <p class="research-description">For liver disease research, you might want to search in databases like PubMed <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/" class="research-link">https://pubmed.ncbi.nlm.nih.gov/</a> using keywords like "liver disease research" or specific liver conditions like "cirrhosis" or "hepatitis." Look for papers from reputable institutions or journals like "Hepatology" or "Liver International."</p>
+      <p class="research-description"> "The impact of steatosis on liver regeneration" <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/30462610/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+
+  <!-- Cancer Research Item -->
+  <div id="cancer" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Cancer</h3>
+      <p class="research-description">To find cancer research papers, you can use PubMed or other cancer-focused databases like Cancer.gov <a target="_blank" href="https://www.cancer.gov/">https://www.cancer.gov/</a> or the American Cancer Society <a target="_blank" href="https://www.cancer.org/">https://www.cancer.org/</a>. Search with keywords like "cancer research" along with the specific type of cancer you're interested in.</p>
+      <p class="research-description"> "Tumor microenvironment: recent advances in various cancer treatments" <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/29949179/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+
+  <!-- Heart Research Item -->
+  <div id="heart" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Heart Disease</h3>
+      <p class="research-description">Heart disease research can be found on PubMed <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/" class="research-link">https://pubmed.ncbi.nlm.nih.gov/</a>. Use keywords like "heart disease research" or "cardiovascular disease research." Reputable journals include "Circulation" and "European Heart Journal."</p>
+      <p class="research-description">"Radiation-induced heart disease: a review of classification, mechanism and prevention" <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/31592122/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+
+  <!-- Ovarian Cyst Research Item -->
+  <div id="ovarian-cyst" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Ovarian Cyst</h3>
+      <p class="research-description">For ovarian cyst research, PubMed <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/" class="research-link">https://pubmed.ncbi.nlm.nih.gov/</a> is a good starting point. Use keywords like "ovarian cyst research" or "ovarian cyst treatment." Journals like "Obstetrics & Gynecology" and "Fertility and Sterility" might have relevant papers.</p>
+      <p class="research-description">"Ovarian cyst removal influences ovarian reserve dependent on histology, size and type of operation" <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/29806554/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+
+  <!-- Diabetes Research Item -->
+  <div id="diabetes" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Diabetes</h3>
+      <p class="research-description">Diabetes research can be found on PubMed <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/" class="research-link">https://pubmed.ncbi.nlm.nih.gov/</a> or specialized diabetes research journals. Search with keywords like "diabetes research" or "type 2 diabetes research." Journals like "Diabetes Care" and "Diabetes" often publish high-quality research.</p>
+      <p class="research-description">"Diagnosis and Management of Central Diabetes Insipidus in Adults" <a href="https://pubmed.ncbi.nlm.nih.gov/35771962/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+
+  <!-- Infectious Disease Research Item -->
+  <div id="infectious-disease" class="research-list">
+    <div class="research-item">
+      <h3 class="research-title">Infectious Disease</h3>
+      <p class="research-description">Infectious disease research can also be found on PubMed <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/" class="research-link">https://pubmed.ncbi.nlm.nih.gov/</a>. Use keywords like "infection disease research."</p>
+      <p class="research-description">"Infection and war" <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/21025964/" class="research-link">Read Paper</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
